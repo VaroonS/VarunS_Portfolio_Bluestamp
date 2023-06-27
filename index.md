@@ -1,5 +1,5 @@
  #  Dual Axis Solar Tracker 
-The Dual Axis Solar Tracker is an arduino operated solar panel that is moved along a horizontal and vertical axis using servos. The Tracker obtains inputs from a board that contains 4 photoresistors, obtaining light value inputs for each photoresistor, and computing these values to obtain two new values that .
+The Dual Axis Solar Tracker is an arduino operated solar panel that is moved along a horizontal and vertical axis using servos. The tracker obtains inputs from a board that contains 4 photoresistors, obtaining light value inputs for each photoresistor, and computing these values to obtain two new values that correspond to angles that a vertical and horizontal servo need to rotate to. In completing this project, additional modifications have been implemented that utilizes a second sensor, this time for water level, and  using the inputs obtained from this sensor in order to let power run from the solar panel to a pump. The process of creating this tracker and the associated additional features is detailed in the document below.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
