@@ -10,44 +10,193 @@ The Dual Axis Solar Tracker is an arduino operated solar panel that is moved alo
 ![Headstone Image](logo.svg)
   
 # Final Milestone
-My final milestone for this project was achieved during the third week. ofthe program, a day prior to presentation of the project. I have completed a working solar panel system that utilizing the power outputted by the solar panel in order to power a water tank pumping system whenever the water level inside the tank is above a certain level.
+My final milestone for this project was completed towards the conclusion of the third week of the program, and as such, the end of the program as well. My final working setup involves a solar panel that powers a small water pump , with the wires of the solar panel and the pump being partially connected (the ground wires were connected), while the other wir
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Second Milestone
 My second milestone for this project was achieved towards the end of the second week of the program. At this point, I have succeeded in getting my water sensor to function as intended, outputting low values when the sensor is not submerged, and values near one thousand when the sensor is submerged. The entire process of wiring my water sensor was rather difficult, and it took some testing of various wire and sensor orientations in order to discover the root of problems I faced in obtaining the correct outputs. The sensor itself consists of a wired bulb that is capped with a diamond shaped structure that is to be submerged in fluid. 4 wires lead out from this into a small board, which are then consolidated into 3 wires that connect to the Arduino Board. After rewiring the circuits mutiple times, I came to the conclusion that the problem was related to the fact that the pins at the top of the shiled were connected to the transistors, which affected the inputs and outputs and prevented the setup from working as intended. Wiring the sensor to the board directly solved the issue, however I must now modify my shield so that I can wire the board underneath it. I hope to accomplish thsi by my final milestone, alongside my completed system. 
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 # First Milestone
-The first milestone for this project was completed between the first and second weeks of the program. I have currently managed to completely build a working solar tracker that successfully takes  light input via photoresistors and utilizes the code given by BrownDogGadgets to output light reading values for each of the photoresistors, average readings for each set of photoresistors (left, right, down, top), and of course, angles that the servos of the tracker need to orient the solar panel at an ideal angle. Regardless, a few challenges remain to be overcome, and modification is essential in the coming weeks. One such challenge that I have faced, and that which I am currently attempting to resolve, is the issue of the voltmeter that is directly connected to the solar panel, which has not been functional as of yet. Various steps to resolve this problem have been taken, including cutting the wires, re-stripping a small portion of the insulation, and then reconnecting the wires, however this has been to no avail. One way in which this problem was tested was by connecting the solar panel to a different voltmeter that was known to be functional, and by doing this, I was able to conclude the problem was related to the voltmeter, given that an output from the panel was detected, and hence, I simply decided to abandon using the voltmeter as I anyways intend to wire my panel to a different system.  Another challenge I have been working through is wire management, and I hope to resolve this issue by the completion period of my second milestone. Additionally,  I aim to ameliorate the condition of my wire management such that the wires are not getting in the way of moving parts and are contained within the main frame of the solar tracker. All in all, I believe that the project has been set on a path to completion and successful modification, and it is indispensable that challenges be overcome by the conclusion of the second milestone.
+The first milestone for this project was completed between the first and second weeks of the program. I have currently managed to completely build a working solar tracker that successfully takes  light input via photoresistors and utilizes the code given by BrownDogGadgets to output light reading values for each of the photoresistors, average readings for each set of photoresistors (left, right, down, top), and of course, angles that the servos of the tracker need to orient the solar panel at an ideal angle. Regardless, a few challenges remain to be overcome, and modification is essential in the coming weeks. One such challenge that I have faced, and that which I am currently attempting to resolve, is the issue of the voltmeter that is directly connected to the solar panel, which has not been functional as of yet. Various steps to resolve this problem have been taken, including cutting the wires, re-stripping a small portion of the insulation, and then reconnecting the wires, however this has been to no avail. Another challenge I have been working through is wire management, and I hope to resolve this issue by the completion period of my second milestone. Additionally,  I aim to ameliorate the condition of my wire management such that the wires are not getting in the way of moving parts and are contained within the main frame of the solar tracker. All in all, I believe that the project has been set on a path to completion and successful modification, and it is indispensable that challenges be overcome by the conclusion of the second milestone.
 
 
 
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+Below is all the code I used in order to make this project run correctly. Due to limitations on wiring space due to the arduino shield, I have been pushed to run the Solar tracking element seperatley from the pumping element, and as such, I have two different code sections. The code below is my code for the pumping and water sensor mechanism. I would like to mention the official code provided by CQRobot, the manufacturer of the sensor, as I utilized a similar code structure to their.
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+```//Initialization
+int SENSOR_PIN= A4;
+int val;
+int RELAY_PIN = A5;
+void setup()
+{ 
+Serial.begin(9600);
+//setting inputs and outputs:
+pinMode(SENSOR_PIN,INPUT);
+pinMode(RELAY_PIN, OUTPUT);
 }
+void loop()
+{
+val=digitalRead(SENSOR_PIN);// read sensor value 
+Serial.println(val); // print the data from the sensor for debugging
+delay(100);
+//Conditional statements for pump activation
+if(val==LOW)
+{ digitalWrite(RELAY_PIN, LOW);}
+else
+{ digitalWrite(RELAY_PIN,HIGH);}
+
+}
+
+```
+Additionally, here  is the code for the solar tracking mechanism, which is from BrownDogGadget's  official website for their Solar Tracker.
+
+```/*
+ * Dual_Axis_Tracker_V3.ino
+ *
+ * Brown Dog Gadgets <https://www.browndoggadgets.com/>
+ * 
+ */
+
+// include Servo library
+#include <Servo.h>
+
+// horizontal servo
+Servo horizontal;
+int servoh = 90;
+
+int servohLimitHigh = 180;
+int servohLimitLow = 65;
+
+Servo vertical;
+int servov = 90;
+
+int servovLimitHigh = 120;
+int servovLimitLow = 15;
+
+
+// LDR pin connections
+int ldrTR = 0; // LDR top right
+int ldrTL = 1; // LDR top left
+int ldrBR = 2; // LDR bottom right
+int ldrBL = 3; // LDR bottom left
+
+
+void setup() {
+  Serial.begin(9600);
+  // servo connections
+  horizontal.attach(5);
+  vertical.attach(6);
+  // move servos
+  horizontal.write(90);
+  vertical.write(45);
+  delay(3000);
+}
+
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+  int tr = analogRead(ldrTR); // top right
+  int tl = analogRead(ldrTL); // top left
+  int br = analogRead(ldrBR); // bottom right
+  int bl = analogRead(ldrBL); // bottom left
+
+  int dtime = 0; // change for debugging only
+  int tol = 50;
+
+  int avt = (tl + tr) / 2; // average value top
+  int avd = (bl + br) / 2; // average value bottom
+  int avl = (tl + bl) / 2; // average value left
+  int avr = (tr + br) / 2; // average value right
+
+  int dvert = avt - avd;  // check the difference of up and down
+  int dhoriz = avl - avr; // check the difference of left and right
+
+
+  // send data to the serial monitor if desired
+  Serial.print(tl);
+  Serial.print(" ");
+  Serial.print(tr);
+  Serial.print(" ");
+  Serial.print(bl);
+  Serial.print(" ");
+  Serial.print(br);
+  Serial.print("  ");
+  Serial.print(avt);
+  Serial.print(" ");
+  Serial.print(avd);
+  Serial.print(" ");
+  Serial.print(avl);
+  Serial.print(" ");
+  Serial.print(avr);
+  Serial.print("  ");
+  Serial.print(dtime);
+  Serial.print("   ");
+  Serial.print(tol);
+  Serial.print("  ");
+  Serial.print(servov);
+  Serial.print("   ");
+  Serial.print(servoh);
+  Serial.println(" ");
+
+
+  // check if the difference is in the tolerance else change vertical angle
+  if (-1 * tol > dvert || dvert > tol) {
+   if (avt > avd) {
+     servov = ++servov;
+      if (servov > servovLimitHigh) {
+        servov = servovLimitHigh;
+      }
+    }
+    else if (avt < avd) {
+      servov = --servov;
+      if (servov < servovLimitLow) {
+        servov = servovLimitLow;
+      }
+    }
+    
+    vertical.write(servov);
+  }
+
+  // check if the difference is in the tolerance else change horizontal angle
+  if (-1 * tol > dhoriz || dhoriz > tol) {
+    if (avl > avr) {
+      servoh = --servoh;
+      if (servoh < servohLimitLow) {
+        servoh = servohLimitLow;
+      }
+    }
+    else if (avl < avr) {
+      servoh = ++servoh;
+      if (servoh > servohLimitHigh) {
+        servoh = servohLimitHigh;
+      }
+    }
+    else if (avl = avr) {
+      // nothing
+    }
+    
+    horizontal.write(servoh);
+  }
+  
+  delay(dtime);
+  
 }
+
+
+
+
 ```
 
 # Bill of Materials
