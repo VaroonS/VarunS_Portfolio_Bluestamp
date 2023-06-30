@@ -203,13 +203,13 @@ Here's where you'll list the parts in your project. To add more rows, just copy 
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-|:--:|:--:|:--:|:--:|
+|Arduino Relay|Used to control pump power flow|$5.89|https://tinyurl.com/3wkc9dp9|
+|Battery Clip 9V with JACK connector|Connect 9V battery to board|$6.99 |https://tinyurl.com/449hjb8b|
+|Dual Axis Solar Tracker Kit|Base Solar Tracker Build|$150.00|https://www.browndoggadgets.com/products/dual-axis-smart-solar-tracker|
+|2x Duracell 9V batteries|Used to power board and test parts|$8.99|https://tinyurl.com/ymwhvf6u|
+|Plusivo Soldering Iron Kit|Solder loose wire connections and provides othe materials|$24.99|https://tinyurl.com/4hccdk9a|
+
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
