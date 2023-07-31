@@ -15,8 +15,7 @@ My final milestone for this project was completed towards the conclusion of the 
 # Second Milestone
 My second milestone for this project was achieved towards the end of the second week of the program. At this point, I have succeeded in getting my water sensor to function as intended, outputting low values when the sensor is not submerged, and values near one thousand when the sensor is submerged. The entire process of wiring my water sensor was rather difficult, and it took some testing of various wire and sensor orientations in order to discover the root of problems I faced in obtaining the correct outputs. The sensor itself consists of a wired bulb that is capped with a diamond shaped structure that is to be submerged in fluid. 4 wires lead out from this into a small board, which are then consolidated into 3 wires that connect to the Arduino Board. After rewiring the circuits mutiple times, I came to the conclusion that the problem was related to the fact that the pins at the top of the shiled were connected to the transistors, which affected the inputs and outputs and prevented the setup from working as intended. Wiring the sensor to the board directly solved the issue, however I must now modify my shield so that I can wire the board underneath it. I hope to accomplish thsi by my final milestone, alongside my completed system. 
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-O5K9Qy7PYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 # First Milestone
