@@ -205,10 +205,10 @@ void loop() {
 ```
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
-| **Part** | **Note** | **Price** | **Link** |
+The first list below includes all components utilized in the completion of the project. This list does not include tools that will be neccesary in assembling various parts.
+
+| **Component** | **Information** | **Expenses** | **Purchase Link** |
 | ---      | ---      | ---       |---       |
 |Arduino Relay|Used to control pump power flow|$5.89|https://tinyurl.com/3wkc9dp9|
 |Arduino UNO Board| Second board used to run solartracking side by side with water sensing| $28.50| https://tinyurl.com/2fj7ea2s |
@@ -217,9 +217,15 @@ Don't forget to place the link of where to buy each component inside the quotati
 |DC 3V 5V Micro Submersible Mini Water Pump | Connected with Relay and Power source to control via Arduino Board | $11.39 | https://tinyurl.com/usdts5sw |
 |Dual Axis Solar Tracker Kit|Base Solar Tracker Build|$150.00|https://www.browndoggadgets.com/products/dual-axis-smart-solar-tracker|
 |2x Duracell 9V batteries|Used to power board and test parts|$8.99|https://tinyurl.com/ymwhvf6u|
-|Plusivo Soldering Iron Kit|Solder loose wire connections and provides othe materials|$24.99|https://tinyurl.com/4hccdk9a|
-|Solder loose wire connections and provides othe materials|$24.99|https://tinyurl.com/4hccdk9a|
+|**Total Sum of expenses: $225.75**|
 
+The list below includes tools that were purchased for the completion of the project or that are highly reccomended.
+| **Tool** | **Information** | **Expenses** | **Purchase Link** |
+|Plusivo Soldering Iron Kit|Solder loose wire connections and provides othe materials| $24.99 |https://tinyurl.com/4hccdk9a|
+|Klien Adjustable Screwdriver ID: 32314| Provides a wide array of screw types and sizes.| $19.30 | https://www.walmart.com/ip/Klein-Tools-32314-14-in-1-Precision-Screwdriver-Nut-Driver/579787783|
+|Wire Stripper| Extensively used in adjusting wire length and stripping wires | $7.39 | https://tinyurl.com/hbh4965v |
+
+Additional tools that were used include a power screw driver with a 3/4th to 5/8th inch flat drill bit. These are not absolutely neccesary, however, they may be prefered for a more compact and well managed build. 
 
 
 # Other Resources/Examples
