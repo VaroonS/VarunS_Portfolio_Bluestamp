@@ -209,11 +209,16 @@ Here's where you'll list the parts in your project. To add more rows, just copy 
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
+| ---      | ---      | ---       |---       |
 |Arduino Relay|Used to control pump power flow|$5.89|https://tinyurl.com/3wkc9dp9|
+|Arduino UNO Board| Second board used to run solartracking side by side with water sensing| $28.50| https://tinyurl.com/2fj7ea2s |
 |Battery Clip 9V with JACK connector|Connect 9V battery to board|$6.99 |https://tinyurl.com/449hjb8b|
+|CQR Robot Contact Water Sensor|Wire  CQR board with 3.3 V, GND, and any digital pin on Arduino UNO board|$15.99|https://tinyurl.com/5bsmrxd9| 
+|DC 3V 5V Micro Submersible Mini Water Pump | Connected with Relay and Power source to control via Arduino Board | $11.39 | https://tinyurl.com/usdts5sw |
 |Dual Axis Solar Tracker Kit|Base Solar Tracker Build|$150.00|https://www.browndoggadgets.com/products/dual-axis-smart-solar-tracker|
 |2x Duracell 9V batteries|Used to power board and test parts|$8.99|https://tinyurl.com/ymwhvf6u|
 |Plusivo Soldering Iron Kit|Solder loose wire connections and provides othe materials|$24.99|https://tinyurl.com/4hccdk9a|
+|Solder loose wire connections and provides othe materials|$24.99|https://tinyurl.com/4hccdk9a|
 
 
 
