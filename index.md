@@ -217,10 +217,11 @@ The first list below includes all components utilized in the completion of the p
 |DC 3V 5V Micro Submersible Mini Water Pump | Connected with Relay and Power source to control via Arduino Board | $11.39 | https://tinyurl.com/usdts5sw |
 |Dual Axis Solar Tracker Kit|Base Solar Tracker Build|$150.00|https://www.browndoggadgets.com/products/dual-axis-smart-solar-tracker|
 |2x Duracell 9V batteries|Used to power board and test parts|$8.99|https://tinyurl.com/ymwhvf6u|
-|**Total Sum of expenses: $225.75**|
+| | | |**Total Sum of expenses: $227.75**|
 
 The list below includes tools that were purchased for the completion of the project or that are highly reccomended.
 | **Tool** | **Information** | **Expenses** | **Purchase Link** |
+|--- | --- | --- | --- |
 |Plusivo Soldering Iron Kit|Solder loose wire connections and provides othe materials| $24.99 |https://tinyurl.com/4hccdk9a|
 |Klien Adjustable Screwdriver ID: 32314| Provides a wide array of screw types and sizes.| $19.30 | https://www.walmart.com/ip/Klein-Tools-32314-14-in-1-Precision-Screwdriver-Nut-Driver/579787783|
 |Wire Stripper| Extensively used in adjusting wire length and stripping wires | $7.39 | https://tinyurl.com/hbh4965v |
